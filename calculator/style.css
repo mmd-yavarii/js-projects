@@ -44,6 +44,8 @@ body {
   display: flex;
   justify-content: end;
   opacity: 0.5;
+  line-height: 30px;
+  text-align: end;
 }
 
 /* btns */
@@ -57,7 +59,7 @@ body {
   justify-items: center;
   gap: 0.5em;
 }
-.btns {
+.btns-style {
   width: 4.5em;
   height: 4.5em;
   border-radius: 20px;
@@ -69,7 +71,7 @@ body {
   transition: box-shadow 0.2s ease, border 0.2s ease;
   border: 1px solid transparent;
 }
-.btns:active {
+.btns-style:active {
   box-shadow: none;
   border: 1px solid #88a5bf42;
 }
