@@ -1,9 +1,8 @@
-const URL = "../data.json";
+const URL = "./data.json";
 
 async function fetchData() {
   const response = await fetch(URL);
-  const result = await response.json();
-  return result;
+  const data = await response.json();
 }
 
-export { fetchData };
+export default fetchData;

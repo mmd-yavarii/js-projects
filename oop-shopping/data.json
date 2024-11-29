@@ -1,65 +1,82 @@
 [
   {
-    "id": 1,
-    "name": "Bag",
-    "price": 29,
-    "image": "../img/bag.png",
-    "alt": "bag product"
-  },
-  {
     "id": 2,
-    "name": "Pen",
-    "price": 3,
-    "image": "../img/pen.png",
-    "alt": "pen product"
+    "image": "./img/2.png",
+    "name": "Nike X33",
+    "gender": "Men",
+    "price": 189,
+    "background": "#ffe9d4"
   },
   {
     "id": 3,
-    "name": "Note Book",
-    "price": 12,
-    "image": "../img/note-book.png",
-    "alt": "note book product"
+    "image": "./img/3.png",
+    "name": "Nike S872",
+    "gender": "Men",
+    "price": 111,
+    "background": "#ffe1e1"
   },
   {
     "id": 4,
-    "name": "Colored Pencils",
-    "price": 11,
-    "image": "../img/colored-pencils.png",
-    "alt": "colored pencils product"
-  },
-  {
-    "id": 5,
-    "name": "Pencil",
-    "price": 3,
-    "image": "../img/pencil.png",
-    "alt": "pencil product"
+    "image": "./img/4.png",
+    "name": "Nike 11ms",
+    "gender": "Men",
+    "price": 196,
+    "background": "#e1e2ff"
   },
   {
     "id": 6,
-    "name": "Ruler",
-    "price": 8,
-    "image": "../img/ruler.png",
-    "alt": "ruler product"
+    "image": "./img/6.png",
+    "name": "Nike M66",
+    "gender": "Men",
+    "price": 94,
+    "background": "#d9eaf4"
   },
   {
     "id": 7,
-    "name": "Mug",
-    "price": 17,
-    "image": "../img/mug.png",
-    "alt": "mug product"
+    "image": "./img/7.png",
+    "name": "Nike Z1X",
+    "gender": "Men",
+    "price": 211,
+    "background": "#d9f4f0"
   },
   {
     "id": 8,
-    "name": "Eraser",
-    "price": 2,
-    "image": "../img/eraser.png",
-    "alt": "eraser product"
+    "image": "./img/8.png",
+    "name": "Nike AZ",
+    "gender": "Men",
+    "price": 101,
+    "background": "#cfcfec"
   },
   {
     "id": 9,
-    "name": "Glue Stick",
-    "price": 5,
-    "image": "../img/glue-stick.png",
-    "alt": "glue stick product"
+    "image": "./img/9.png",
+    "name": "Nike KM",
+    "gender": "Men",
+    "price": 99,
+    "background": "#daffe5"
+  },
+  {
+    "id": 10,
+    "image": "./img/10.webp",
+    "name": "Nike Xh1",
+    "gender": "Men",
+    "price": 191,
+    "background": "#daf6ff"
+  },
+  {
+    "id": 11,
+    "image": "./img/11.webp",
+    "name": "Nike R21",
+    "gender": "Men",
+    "price": 284,
+    "background": "#dae8ff"
+  },
+  {
+    "id": 12,
+    "image": "./img/12.png",
+    "name": "Nike S19",
+    "gender": "Men",
+    "price": 97,
+    "background": "#dedede"
   }
 ]

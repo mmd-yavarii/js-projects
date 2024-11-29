@@ -1,13 +1,11 @@
-import { fetchData } from "../utils/httpReq.js";
-import Products from "../models/Product.js";
+import fetchData from "../utils/httpReq.js";
+import Product from "../models/Product.js";
+import Cart from "../models/Cart.js";
 
-const productsNode = document.querySelector("#products");
+const colors = ["#ffe9ed", "#eae9ff", "#e0ffe8", "#f6ffd4", "#ffe9d4"];
 
-// get data and handel the app
 async function render() {
-  const productsData = await fetchData();
-  const productsInstance = new Products(productsNode, productsData);
-  productsInstance.showProducts();
+  const data = await fetchData();
 }
 
-document.addEventListener("DOMContentLoaded", render);
+window.addEventListener("load", render);
