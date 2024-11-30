@@ -1,10 +1,9 @@
-class Products {
-  constructor(parent, products, cart) {
-    this.parent = parent;
-    this.products = products;
-    this.cart = cart;
+import Display from "./Display.js ";
 
-    this.parent.addEventListener("click", this);
+class Products extends Display {
+  constructor(parent, products, cart) {
+    super(parent, products);
+    this.cart = cart;
   }
 
   // event handeler for add items to cart
@@ -21,7 +20,7 @@ class Products {
     this.cart.showProducts();
   }
 
-  // create products and add on the page
+  // overwrited show products
   showProducts() {
     this.products.forEach((item) => {
       this.parent.innerHTML += `
@@ -30,8 +29,8 @@ class Products {
           <div class="product-info">
           <h3>${item.name}</h3> 
             <div>
-              <span>${item.price}</span>
-              <button data-id="${item.id}">+ </button>
+              <span>${item.price}$</span>
+              <button data-id="${item.id}">+</button>
             </div>
           </div>
         </div>

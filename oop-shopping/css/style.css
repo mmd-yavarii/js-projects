@@ -25,12 +25,14 @@ main {
 
 #products {
   display: flex;
+  width: 75%;
   flex-wrap: wrap;
   margin-right: 40px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
 }
 .products-item {
-  width: 300px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +42,7 @@ main {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .products-item img {
-  width: 300px;
+  width: 100%;
   border-radius: 25px;
 }
 .product-info {
@@ -84,4 +86,100 @@ main {
   background-color: var(--color-primary);
   color: #fff;
   border-radius: 40%;
+}
+
+/* cart */
+#cart {
+  width: 25%;
+  padding: 0.5em;
+}
+
+#cart h3 {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+#cart-list h5 {
+  color: var(--color-error);
+  border: 2px solid var(--color-error);
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+#cart-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--color-light);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+#cart-list img {
+  width: 60px;
+  border-radius: 50%;
+}
+.cart-info {
+  text-align: center;
+}
+.cart-info h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+.cart-info p {
+  color: gray;
+}
+.cart-controll div {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cart-controll div button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  border: none;
+  line-height: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.cart-controll div button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.remove-ele {
+  background-color: #fff;
+  color: var(--color-error);
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  outline: none;
+  border: 1px solid var(--color-error);
+}
+.remove-ele:hover {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+#total-price {
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
+  padding: 20px;
+  color: gray;
+}
+#total-price span {
+  color: var(--color-primary);
 }
