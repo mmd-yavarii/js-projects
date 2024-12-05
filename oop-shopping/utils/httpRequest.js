@@ -1,4 +1,4 @@
-const URL = "utils/data.json";
+const URL = "./data.json";
 
 async function fetchData() {
   const response = await fetch(URL);
