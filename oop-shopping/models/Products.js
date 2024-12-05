@@ -1,41 +1,61 @@
-import Display from "./Display.js ";
+import App from "./Parent.js";
 
-class Products extends Display {
-  constructor(parent, products, cart) {
-    super(parent, products);
-    this.cart = cart;
+class Products extends App {
+  constructor(parentElement, products) {
+    super(parentElement, products);
+    this.parentElement.addEventListener("click", this);
   }
 
-  // event handeler for add items to cart
+  // all events to add or remove carts
   handleEvent(event) {
-    if (event.target.tagName == "BUTTON") {
-      this.addToCart(event.target.dataset.id);
+    const tagName = event.target.tagName.toLowerCase();
+    const which = event.target.innerText;
+
+    if (tagName === "button") {
+      switch (which) {
+        case "+":
+          this.increase(event.target);
+          break;
+
+        case "-":
+          this.decrease(event.target);
+          break;
+      }
     }
   }
 
-  // add to cart
-  addToCart(id) {
-    const theProduct = this.products.find((item) => item.id == id);
-    this.cart.products.push(theProduct);
-    this.cart.showProducts();
+  // add a product to cart
+  increase(event) {
+    const product = this.products.find((i) => i.id === event.dataset.id);
+    const btnsAndSpan = [...event.parentElement.children];
+
+    // / show button(-) and increase span value
+    btnsAndSpan.forEach((i) => {
+      if (i.tagName == "SPAN") i.innerText = +i.innerText + 1;
+      i.style.display = "flex";
+    });
+    this.cartProducts.push(product);
   }
 
-  // overwrited show products
-  showProducts() {
-    this.products.forEach((item) => {
-      this.parent.innerHTML += `
-        <div class="products-item"> 
-          <img src="${item.image}" alt="${item.alt}" />
-          <div class="product-info">
-          <h3>${item.name}</h3> 
-            <div>
-              <span>${item.price}$</span>
-              <button data-id="${item.id}">+</button>
-            </div>
-          </div>
-        </div>
-      `;
+  // remove a product from cart
+  decrease(event) {
+    const index = this.products.find((i) => i.id === event.dataset.id);
+    const btnsAndSpan = [...event.parentElement.children];
+
+    // remove button(-) and decrease span value
+    btnsAndSpan.forEach((i) => {
+      if (i.tagName == "SPAN") {
+        if (+i.innerText > 1) {
+          i.innerText = +i.innerText - 1;
+        } else {
+          btnsAndSpan.forEach((i) => {
+            i.style.display = i.innerText == "+" ? "flex" : "none";
+            i.tagName == "SPAN" ? (i.innerText = "0") : null;
+          });
+        }
+      }
     });
+    this.cartProducts.splice(index, 1);
   }
 }
 
